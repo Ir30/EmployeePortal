@@ -12,6 +12,7 @@ namespace EmployeePortal.Infrastructure.Data
 
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Department> Departments { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -45,6 +46,9 @@ namespace EmployeePortal.Infrastructure.Data
                 entity.Property(e => e.Email)
                       .HasMaxLength(150);
             });
+            modelBuilder.Entity<User>()
+                .HasIndex(u => u.Username)
+                .IsUnique();
         }
     }
 }

@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EmployeePortal.Application.DependencyInjection
+namespace EmployeePortal.Domain.Enums
 {
-    internal class ApplicationDependencyInjection
+    public enum UserRole
     {
+        Admin,
+        User
     }
 }

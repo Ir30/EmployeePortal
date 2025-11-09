@@ -20,7 +20,7 @@ namespace EmployeePortal.Infrastructure.Repositories
         {
             return await _context.Departments
                 .Include(d => d.Employees)
-                .FirstOrDefaultAsync(d => d.Id == id);
+                .FirstOrDefaultAsync(d => d.DepartmentId == id);
         }
     }
 }

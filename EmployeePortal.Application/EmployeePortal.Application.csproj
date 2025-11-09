@@ -10,4 +10,8 @@
     <ProjectReference Include="..\EmployeePortal.Domain\EmployeePortal.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DTOs\Employee\" />
+  </ItemGroup>
+
 </Project>
