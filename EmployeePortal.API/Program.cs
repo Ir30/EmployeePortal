@@ -1,4 +1,5 @@
-﻿using EmployeePortal.Application.Interfaces.IRepositories;
+﻿using EmployeePortal.API.Middleware;
+using EmployeePortal.Application.Interfaces.IRepositories;
 using EmployeePortal.Application.Interfaces.IServices;
 using EmployeePortal.Application.Services;
 using EmployeePortal.Infrastructure.Data;
@@ -149,6 +150,7 @@ app.UseHttpsRedirection();
 // ✅ Authentication + Authorization must come before MapControllers()
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseMiddleware<RequestLoggingMiddleware>();
 
 app.MapControllers();
 
