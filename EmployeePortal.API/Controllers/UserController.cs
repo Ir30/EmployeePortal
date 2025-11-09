@@ -68,7 +68,7 @@ namespace EmployeePortal.API.Controllers
         // ✅ POST: api/user
         // Only Admin can create new users
         [HttpPost]
-        [AllowAnonymous]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create([FromBody] UserCreateDto dto)
         {
             if (!ModelState.IsValid)
