@@ -72,6 +72,7 @@ builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<IDepartmentService, DepartmentService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddSingleton<ICacheService, CacheService>();
 
 // ✅ JWT Authentication Configuration
 var jwtSettings = builder.Configuration.GetSection("Jwt");
